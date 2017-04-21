@@ -1,0 +1,44 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% extends 'layouts/application.html' %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block content %}
+<div class="nav">
+    <div class="nav__logo">
+        <img src="images/mstile-150x150.png" alt="" class="nav__logo__image">
+        <span class="nav__logo__text">MATHSPRING</span>
+    </div>
+
+    <ul class="nav__list">
+        <li class="nav__list__item"><a href="#">My Garden</a></li>
+        <li class="nav__list__item"><a href="#">My Progresss</a></li>
+        <li class="nav__list__item"><a href="#">Practice Area</a></li>
+        <li class="nav__list__item nav__list__item--last"><a href="#">Huy Tran</a></li>
+    </ul>
+</div>
+
+<div class="topic-list">
+    <div class="container">
+        {% for x in [1,2,3,4] %}
+        <div class="topic-list__item">
+            <div class="topic-list__item--flipper">
+                <div class="topic-list__item--front">
+                    Front
+                </div>
+                <div class="topic-list__item--back">
+                    Back
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
