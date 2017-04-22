@@ -1,34 +1,38 @@
 .nav
-    background: gray
+    // background: gray
     display: flex
     flex-direction: row
     justify-content: space-between
     padding: 10px
+    font-family: Raleway, Helvetica, Arial, "Lucida Grande", sans-serif
 
-    &__logo
-        &__image 
-            margin: 5px 10px 0 10px
-            border-radius: 5px
-            width: 40px
-            height: 40px
-        &__text
-            font-size: 2em
-            position: relative
-            top: -7px
+    &__logo-image 
+        margin: 5px 10px 0 10px
+        border-radius: 5px
+        width: 40px
+        height: 40px
+    &__logo-text
+        font-size: 2em
+        position: relative
+        top: -7px
 
     &__list
         margin-top: 18px
         list-style: none
         display: flex
         flex-direction: row
-        &__item
-            margin-right: 60px
+    &__item
+        &--last
+            margin-right: 20px
 
-            &--last
-                margin-right: 20px
         a
+            padding: 15px 25px
             text-decoration: none
-            color: black
+            color: $font-dark-blue
+            border-radius: 5px
 
             &:hover
-                color: blue
+                cursor: pointer
+                background-color: $progress-60
+                // color: whit
+                box-shadow: inset 0 0 10px $progress-60 - 20

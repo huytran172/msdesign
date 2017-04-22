@@ -1,44 +1,108 @@
 .topic-list
+    background-image: url(../images/bgv1.png)
+    background-size: cover
+    background-repeat: no-repeat
     display: flex
     flex-direction: column
+    font-family: Raleway, Helvetica, Arial, "Lucida Grande", sans-serif
 
     .container
-        margin-left: 40px
+        margin-left: 50px
         display: flex
         flex-flow: row wrap
 
     &__item
         // background: gray
-        margin: 50px 50px 0 50px 
+        margin: 30px 20px 30px 20px 
         perspective: 1000px
+        position: relative
 
-        &:hover &--flipper
-            transform: rotateY(180deg)
+        // Add if you want vertical flip, otherwise comment out
+        // change rotate X to rotate Y for horizontal flip
+        // &, &--flipper
+        //     transform-origin: 100% 170px; /* half of height */
 
-        &, &--front, &--back
-            width: 200px
-            height: 300px
+    &__item:hover &__flipper
+        transform: rotateY(-180deg)
 
-        &--flipper
-            transition: 0.6s
-            transform-style: preserve-3d
-            position: relative  
+    &__item, &__front, &__back
+        width: 250px
+        height: 340px
+        border-radius: 5px
 
-        &--front, &--back
-            backface-visibility: hidden
-            position: absolute
-            top: 0
-            left: 0
+    &__flipper
+        transition: 0.6s
+        transform-style: preserve-3d
+        position: relative  
 
-        &--front
-            z-index: 2
-            transform: rotateY(0)
-            background: red
+    &__front, &__back
+        backface-visibility: hidden
+        position: absolute
+        top: 0
+        left: 0
 
-        &--back
-            transform: rotateY(180deg)
-            background: blue
+    &__front
+        z-index: 2
+        transform: rotateX(0)
 
+        &--0
+            background-color: $progress-0
+        &--20
+            background-color: $progress-20
+        &--40
+            background-color: $progress-40
+        &--60
+            background-color: $progress-60
+        &--80
+            background-color: $progress-80
+
+    &__title,
+    &__info
+        color: $font-dark-blue
+
+    &__title
+        margin-bottom: 40px
+        text-align: center
+
+    &__info
+        font-size: 0.8em
+        margin-left: 15px
+    &__back
+        transform: rotateY(180deg)
+        background: white
+    &__buttons
+        text-align: center
+        width: 50%
+        margin: auto
+    &__button
+        padding: 10px
+        margin-bottom: 10px
+        border-radius: 5px
+        font-size: 0.9em
+        &:hover
+            cursor: pointer
+        &--green
+            margin-top: 50px
+            background-color: #54CA6F
+            &:hover
+                background-color: #54CA6F + 20
+        &--yellow
+            background-color: #FCDF28
+            &:hover
+                background-color: #FCDF28 + 20
+        &--brown
+            background-color: #F6A623
+            &:hover
+                background-color: #F6A623 + 20
+
+.pot
+    width: 128px
+    height: 166px
+    margin: 30px auto 0 auto
+    img
+        display: block
+        margin: auto
+        position: relative
 
 
 

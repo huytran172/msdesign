@@ -13,28 +13,40 @@
 {% block content %}
 <div class="nav">
     <div class="nav__logo">
-        <img src="images/mstile-150x150.png" alt="" class="nav__logo__image">
-        <span class="nav__logo__text">MATHSPRING</span>
+        <img src="images/mstile-150x150.png" alt="" class="nav__logo-image">
+        <span class="nav__logo-text">MATHSPRING</span>
     </div>
 
     <ul class="nav__list">
-        <li class="nav__list__item"><a href="#">My Garden</a></li>
-        <li class="nav__list__item"><a href="#">My Progresss</a></li>
-        <li class="nav__list__item"><a href="#">Practice Area</a></li>
-        <li class="nav__list__item nav__list__item--last"><a href="#">Huy Tran</a></li>
+        <li class="nav__item"><a href="#">My Garden</a></li>
+        <li class="nav__item"><a href="#">My Progress</a></li>
+        <li class="nav__item"><a href="#">Practice Area</a></li>
+        <li class="nav__item nav__item--last"><a href="#">Huy Tran</a></li>
     </ul>
 </div>
 
 <div class="topic-list">
     <div class="container">
-        {% for x in [1,2,3,4] %}
+        {% for x in [0, 20,40,60,80] %}
         <div class="topic-list__item">
-            <div class="topic-list__item--flipper">
-                <div class="topic-list__item--front">
-                    Front
+            <div class="topic-list__flipper">
+                <div class="topic-list__front topic-list__front--{{ x }}">
+                    <p class="topic-list__title">XY Linear Functions and Relationships</p>
+                    <p class="topic-list__info">14/16 questions done</p>
+                    <p class="topic-list__info">In Progress</p>
+                    <div class="pot">
+                        <img src="images/pot.png" alt="">
+                    </div>
                 </div>
-                <div class="topic-list__item--back">
-                    Back
+                <div class="topic-list__back">
+                    <p class="topic-list__title">XY Linear Functions and Relationships</p>
+                    <p class="topic-list__info">14/16 questions done</p>
+                    <p class="topic-list__info">In Progress</p>                
+                    <div class="topic-list__buttons">
+                        <div class="topic-list__button topic-list__button--green">CONTINUE</div> 
+                        <div class="topic-list__button topic-list__button--yellow">REVIEW</div> 
+                        <div class="topic-list__button topic-list__button--brown">CHALLENGE</div> 
+                    </div>
                 </div>
             </div>
         </div>
