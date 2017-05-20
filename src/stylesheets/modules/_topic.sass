@@ -1,10 +1,14 @@
 .topic-list
-    background-image: url(../images/bgv1.png)
-    background-size: cover
-    background-repeat: no-repeat
+    // background-image: url(../images/bgv4.png)
+    // background-repeat: repeat-x
+    // background-position: 0px 0px
     display: flex
     flex-direction: column
     font-family: Raleway, Helvetica, Arial, "Lucida Grande", sans-serif
+    color: #FFF;
+    background-color: #3dc3e2;
+    background-image: radial-gradient(#3dc3e2, #3dc3e2 0%, darken(#3dc3e2, 20%) 70%, darken(#3dc3e2, 30%) 100%);
+    // animation: animatedBackground 40s linear infinite;
 
     .container
         margin-left: 50px
@@ -46,15 +50,20 @@
         transform: rotateX(0)
 
         &--0
-            background-color: $progress-0
+            background-color: rgba($progress-0, 0.9)
+            border: 1px solid darken($progress-0, 30%)
         &--20
-            background-color: $progress-20
+            background-color: rgba($progress-20, 0.9)
+            border: 1px solid darken($progress-20, 30%)
         &--40
-            background-color: $progress-40
+            background-color: rgba($progress-40, 0.9)
+            border: 1px solid darken($progress-40, 30%)
         &--60
-            background-color: $progress-60
+            background-color: rgba($progress-60, 0.9)
+            border: 1px solid darken($progress-60, 30%)
         &--80
-            background-color: $progress-80
+            background-color: rgba($progress-80, 0.9)
+            border: 1px solid darken($progress-80, 30%)
 
     &__title,
     &__info
@@ -65,11 +74,12 @@
         text-align: center
 
     &__info
-        font-size: 0.8em
+        font-size: 0.9em
         margin-left: 15px
     &__back
         transform: rotateY(180deg)
         background: white
+        border: 1px solid $font-dark-blue
     &__buttons
         text-align: center
         width: 50%
@@ -79,6 +89,7 @@
         margin-bottom: 10px
         border-radius: 5px
         font-size: 0.9em
+        color: $font-dark-blue
         &:hover
             cursor: pointer
         &--green
@@ -104,7 +115,11 @@
         margin: auto
         position: relative
 
-
+@keyframes animatedBackground 
+    from 
+        background-position: 0 0
+    to  
+        background-position: 100% 0
 
 
 

@@ -26,8 +26,22 @@
 </div>
 
 <div class="topic-list">
+    <div id="Clouds">
+          <div class="Cloud Foreground"></div>
+          <div class="Cloud Background"></div>
+          <div class="Cloud Foreground"></div>
+          <div class="Cloud Background"></div>
+          <div class="Cloud Foreground"></div>
+          <div class="Cloud Background"></div>
+          <div class="Cloud Background"></div>
+          <div class="Cloud Foreground"></div>
+          <div class="Cloud Background"></div>
+          <div class="Cloud Background"></div>
+        <!--  <svg viewBox="0 0 40 24" class="Cloud"><use xlink:href="#Cloud"></use></svg>-->
+    </div>
+
     <div class="container">
-        {% for x in [0, 20,40,60,80] %}
+        {% for x in [0, 20,40,60,80,0,20,40,60,80] %}
         <div class="topic-list__item">
             <div class="topic-list__flipper">
                 <div class="topic-list__front topic-list__front--{{ x }}">
